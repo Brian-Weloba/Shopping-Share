@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cultured">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="390dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/rectangle"
+        android:fontFamily="@font/baloo_1"
+        android:gravity="center"
+        android:padding="40dp"
+        android:text="@string/welcomeQuote"
+        android:textColor="@color/jet"
+        android:textSize="25sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="137dp"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="155dp"
+        android:fontFamily="@font/baloo_1"
+        android:gravity="center"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:text="@string/intro2"
+        android:textColor="@color/jet"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="65dp"
+        android:background="@drawable/rounded_button"
+        android:fontFamily="@font/baloo_1"
+        android:gravity="center"
+        android:padding="6dp"
+        android:textSize="18sp"
+        android:text="Continue"
+        android:textColor="@color/cultured"/>
+
+
+</RelativeLayout>
