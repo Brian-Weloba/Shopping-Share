@@ -6,6 +6,8 @@
     <color name="teal">#127D66</color>
     <color name="cultured">#FCFAF9</color>
     <color name="jet">#333333</color>
+    <color name="whitebg">#F3F1F1</color>
+    <color name="inputPlaceholder">#C2BDBD</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 </resources>
