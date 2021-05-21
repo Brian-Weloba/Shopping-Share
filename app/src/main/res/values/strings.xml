@@ -3,4 +3,6 @@
     <string name="welcomeQuote">You will never \'find\' time for anything. If you want time, you must make it. Charles Buxton</string>
     <string name="intro1">Let us help you spend less time in the supermarket</string>
     <string name="intro2">Join our community of shoppers making life quicker by sharing the load of shopping.</string>
+    <string name="shopping">SHOPPING</string>
+    <string name="continue_text">Continue</string>
 </resources>

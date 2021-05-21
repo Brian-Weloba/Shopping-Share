@@ -44,7 +44,7 @@
         android:gravity="center"
         android:padding="6dp"
         android:textSize="18sp"
-        android:text="Continue"
+        android:text="@string/continue_text"
         android:textColor="@color/cultured"/>
 
 
