@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "945006975790",
+    "project_id": "shopping-share-329fb",
+    "storage_bucket": "shopping-share-329fb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:945006975790:android:50770b68ab4fdbd32338bf",
+        "android_client_info": {
+          "package_name": "com.saturdev.shoppingshare"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "945006975790-nfho70t6uqftgm0m46vncuqs57un9tf5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.saturdev.shoppingshare",
+            "certificate_hash": "4fa5f18a2d48cf7e4b9d64787245d31ea9356e48"
+          }
+        },
+        {
+          "client_id": "945006975790-p3da1cjtvjefj10omedb69gj5mguur89.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAuWPQEr4vNB2--L0p14vQ20FKWXKWU4jU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "945006975790-p3da1cjtvjefj10omedb69gj5mguur89.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
