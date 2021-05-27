@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cultured">
+
+    <!--    <EditText-->
+    <!--        android:id="@+id/editTextTextPersonName2"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_alignParentStart="true"-->
+    <!--        android:layout_alignParentEnd="true"-->
+    <!--        android:layout_alignParentBottom="true"-->
+    <!--        android:layout_centerHorizontal="true"-->
+    <!--        android:layout_marginStart="34dp"-->
+    <!--        android:layout_marginEnd="25dp"-->
+    <!--        android:layout_marginBottom="322dp"-->
+    <!--        android:autofillHints=""-->
+    <!--        android:background="@drawable/textinput"-->
+    <!--        android:ems="10"-->
+    <!--        android:inputType="phone"-->
+    <!--        android:padding="10dp"-->
+    <!--        android:textColor="@color/inputPlaceholder" />-->
+
+    <TextView
+        android:id="@+id/textViewHeader"
+        android:layout_width="match_parent"
+        android:layout_height="270dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/rectangle" />
+
+    <TextView
+        android:id="@+id/textLogIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewHeader"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/baloo_1"
+        android:text="Enter code"
+        android:textColor="@color/jet"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/textPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textLogIn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/baloo_1"
+        android:labelFor="@+id/editTextPassword"
+        android:text="An sms was sent to you with a short code"
+        android:textColor="@color/jet"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/editTextCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textPassword"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="100dp"
+        android:background="@drawable/textinput"
+        android:ems="10"
+        android:inputType="phone"
+        android:padding="15dp"
+        android:textColor="@color/inputPlaceholder"
+        android:textSize="16sp"
+
+        tools:ignore="DuplicateSpeakableTextCheck" />
+
+
+    <Button
+        android:id="@+id/buttonVerify"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextCode"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rounded_button"
+        android:fontFamily="@font/baloo_1"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="Verify"
+        android:textColor="#424242"
+        android:textSize="18sp" />
+
+
+    <TextView
+        android:id="@+id/textResendCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonVerify"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/baloo_1"
+        android:text="Resend code?"
+        android:textColor="@color/jet"
+        android:textSize="14sp" />
+
+
+</RelativeLayout>
