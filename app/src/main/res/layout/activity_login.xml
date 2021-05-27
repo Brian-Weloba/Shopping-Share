@@ -1,87 +1,123 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/cultured">
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textViewHeader"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="180dp"
         android:layout_centerHorizontal="true"
         android:background="@drawable/rectangle" />
 
-    <EditText
-        android:id="@+id/editTextPhone"
+    <TextView
+        android:id="@+id/textLogIn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/textViewHeader"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/baloo_1"
+        android:text="@string/log_in"
+        android:textColor="@color/jet"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/textName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textLogIn"
         android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginBottom="196dp"
-        android:background="@drawable/textinput"
-        android:ems="10"
-        android:inputType="phone"
-        android:padding="10dp"
-        android:textColor="@color/inputPlaceholder" />
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/baloo_1"
+        android:labelFor="@+id/editTextName"
+        android:text="@string/name"
+        android:textColor="@color/jet"
+        android:textSize="16sp" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/editTextName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/textName"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="30dp"
-        android:layout_marginBottom="300dp"
+        android:autofillHints=".AUTOFILL_HINT_PERSON_NAME"
         android:background="@drawable/textinput"
         android:ems="10"
         android:inputType="textPersonName"
-        android:padding="10dp"
-        android:textColor="@color/inputPlaceholder" />
+        android:padding="15dp"
+        android:textColor="@color/inputPlaceholder"
+        android:textSize="16sp"
+        tools:ignore="DuplicateSpeakableTextCheck" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/textPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginLeft="30dp"
-        android:layout_marginBottom="353dp"
+        android:layout_below="@+id/editTextName"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
         android:fontFamily="@font/baloo_1"
-        android:text="What's your first name?"
-        android:textSize="20sp"
-        android:textColor="@color/jet"/>
+        android:labelFor="@+id/editTextPassword"
+        android:text="@string/password"
+        android:textColor="@color/jet"
+        android:textSize="16sp" />
 
-    <TextView
-        android:id="@+id/textView4"
+    <EditText
+        android:id="@+id/editTextPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginLeft="30dp"
-        android:layout_marginBottom="250dp"
-        android:fontFamily="@font/baloo_1"
-        android:text="Phone number: "
-        android:textSize="20sp"
-        android:textColor="@color/jet"/>
+        android:layout_below="@+id/textPassword"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:autofillHints=".AUTOFILL_HINT_PASSWORD"
+        android:background="@drawable/textinput"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:padding="15dp"
+        android:textColor="@color/inputPlaceholder"
+        android:textSize="16sp"
+        tools:ignore="DuplicateSpeakableTextCheck" />
+
 
     <Button
-        android:id="@+id/startOrdering"
-        android:layout_width="wrap_content"
+        android:id="@+id/buttonLogIn"
+        android:layout_width="88dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/editTextPassword"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="65dp"
+        android:layout_marginTop="30dp"
         android:background="@drawable/rounded_button"
         android:fontFamily="@font/baloo_1"
         android:gravity="center"
-        android:padding="6dp"
-        android:text="Start Ordering"
-        android:textColor="@color/cultured"
+        android:padding="5dp"
+        android:text="@string/log_in"
+        android:textColor="#424242"
         android:textSize="18sp" />
+
+
+    <TextView
+        android:id="@+id/textForgotPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonLogIn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/baloo_1"
+        android:text="Forgot your password?"
+        android:textColor="@color/jet"
+        android:textSize="14sp" />
+
 
 </RelativeLayout>
