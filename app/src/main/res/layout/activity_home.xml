@@ -1,29 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center"
-    tools:context=".HomeActivity">
+    tools:context=".HomeActivity"
+    android:background="@color/cultured">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="You are logged in as"/>
+        android:layout_above="@+id/phoneNmb"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:text="You are logged in as"
+        android:textColor="@color/jet"/>
 
     <TextView
-        android:id="@+id/phoneTv"
+        android:id="@+id/phoneNmb"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Phone number"/>
+        android:layout_above="@+id/buttonlogOut"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:text="Phone number"
+        android:textColor="@color/jet"/>
 
     <Button
         android:id="@+id/buttonlogOut"
-        android:layout_marginTop="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="logout"/>
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:text="logout"
+        android:textColor="@color/jet"/>
 
-</LinearLayout>
+<!--    <GridLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:columnCount="3"-->
+<!--        android:rowCount="5" />-->
+
+</RelativeLayout>
