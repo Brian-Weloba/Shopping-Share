@@ -1,7 +1,6 @@
 package com.saturdev.shoppingshare;
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -9,18 +8,20 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
-import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class SignUp extends AppCompatActivity {
-    @BindView(R.id.textLogInOpt)
-    TextView mTextLoginOpt;
+    @SuppressLint("NonConstantResourceId")
     @BindView(R.id.spinnerCountries)
     Spinner mSpinner;
+    @SuppressLint("NonConstantResourceId")
     @BindView(R.id.editTextPhone)
     EditText mPhoneNumber;
+    @SuppressLint("NonConstantResourceId")
     @BindView(R.id.buttonSignUp)
     Button mSignUp;
 
@@ -47,17 +48,10 @@ public class SignUp extends AppCompatActivity {
                 String phoneNum = "+" + code + number;
 
                 Intent intent = new Intent(SignUp.this, VerifyPhoneActivity.class);
-                intent.putExtra("phonenumber",phoneNum);
+                intent.putExtra("phonenumber", phoneNum);
                 startActivity(intent);
             }
         });
 
-        mTextLoginOpt.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(SignUp.this, LoginActivity.class);
-                startActivity(intent);
-            }
-        });
     }
 }
