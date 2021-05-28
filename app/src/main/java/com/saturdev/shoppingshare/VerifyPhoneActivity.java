@@ -3,8 +3,10 @@ package com.saturdev.shoppingshare;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
@@ -23,6 +25,7 @@ import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthOptions;
 import com.google.firebase.auth.PhoneAuthProvider;
 
+import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 
 import butterknife.BindView;
@@ -36,7 +39,8 @@ public class VerifyPhoneActivity extends AppCompatActivity {
     TextView mResend;
     @BindView(R.id.editTextCode)
     EditText mCode;
-
+    @BindView(R.id.textInstructions)
+    TextView mInstructions;
 
 
     private String mVerificationId;
@@ -81,17 +85,21 @@ public class VerifyPhoneActivity extends AppCompatActivity {
             @Override
             public void onVerificationFailed(@NonNull FirebaseException e) {
                 pd.dismiss();
-                Toast.makeText(VerifyPhoneActivity.this,""+e.getMessage(),Toast.LENGTH_SHORT).show();
+                Toast.makeText(VerifyPhoneActivity.this, "" + e.getMessage(), Toast.LENGTH_SHORT).show();
             }
 
+            @SuppressLint("SetTextI18n")
             @Override
             public void onCodeSent(@NonNull String verificationId, @NonNull PhoneAuthProvider.ForceResendingToken token) {
                 super.onCodeSent(verificationId, token);
-                Log.d(TAG,"onCodeSent: "+verificationId);
+                Log.d(TAG, "onCodeSent: " + verificationId);
 
                 mVerificationId = verificationId;
                 forceResendingToken = token;
                 pd.dismiss();
+
+                Toast.makeText(VerifyPhoneActivity.this, "Verification code sent... \nto: " + phoneNumber + ".", Toast.LENGTH_SHORT).show();
+                mInstructions.setText("Please type the verification code we sent \nto: " + phoneNumber);
 
             }
 
@@ -106,6 +114,7 @@ public class VerifyPhoneActivity extends AppCompatActivity {
                     Toast.makeText(VerifyPhoneActivity.this, "Please Enter verification code", Toast.LENGTH_SHORT).show();
                 } else {
                     verifyPhoneNumberWithCode(mVerificationId, code);
+
                 }
             }
         });
@@ -178,15 +187,21 @@ public class VerifyPhoneActivity extends AppCompatActivity {
                     @Override
                     public void onSuccess(AuthResult authResult) {
                         pd.dismiss();
-                        String phone = firebaseAuth.getCurrentUser().getPhoneNumber();
-                        Toast.makeText(VerifyPhoneActivity.this, "Logged in as " + phone, Toast.LENGTH_SHORT).show();
+                        String phone = Objects.requireNonNull(firebaseAuth.getCurrentUser()).getPhoneNumber();
+                        Toast.makeText(VerifyPhoneActivity.this, phone + " verified!", Toast.LENGTH_SHORT).show();
+                        //start home activity
+                        if (firebaseAuth.getCurrentUser().getDisplayName() == null) {
+                            startActivity(new Intent(VerifyPhoneActivity.this, InfoActivity.class));
+                        } else {
+                            startActivity(new Intent(VerifyPhoneActivity.this, HomeActivity.class));
+                        }
                     }
                 })
                 .addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {
                         pd.dismiss();
-                        Toast.makeText(VerifyPhoneActivity.this,""+e.getMessage(),Toast.LENGTH_SHORT).show();
+                        Toast.makeText(VerifyPhoneActivity.this, "" + e.getMessage(), Toast.LENGTH_SHORT).show();
                     }
                 });
     }
