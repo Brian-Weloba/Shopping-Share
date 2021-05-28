@@ -14,9 +14,9 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class HomeActivity extends AppCompatActivity {
-@BindView(R.id.phoneNmb)
+    @BindView(R.id.phoneNmb)
     TextView mPhoneNum;
-@BindView(R.id.buttonlogOut)
+    @BindView(R.id.buttonlogOut)
     Button mLogOut;
 
     FirebaseAuth firebaseAuth;

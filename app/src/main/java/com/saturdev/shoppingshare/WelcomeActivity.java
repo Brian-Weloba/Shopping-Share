@@ -11,7 +11,8 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class WelcomeActivity extends AppCompatActivity {
-    @BindView(R.id.cont_button) Button mContButton;
+    @BindView(R.id.cont_button)
+    Button mContButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +23,7 @@ public class WelcomeActivity extends AppCompatActivity {
         mContButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(WelcomeActivity.this,SignUp.class);
+                Intent intent = new Intent(WelcomeActivity.this, SignUp.class);
                 startActivity(intent);
             }
         });
