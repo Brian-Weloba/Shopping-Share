@@ -11,10 +11,11 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 import butterknife.BindView;
+import butterknife.ButterKnife;
 
 public class HomeActivity extends AppCompatActivity {
-@BindView(R.id.phoneTv)
-    TextView mPhoneTv;
+@BindView(R.id.phoneNmb)
+    TextView mPhoneNum;
 @BindView(R.id.buttonlogOut)
     Button mLogOut;
 
@@ -24,6 +25,7 @@ public class HomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+        ButterKnife.bind(this);
 
         firebaseAuth = FirebaseAuth.getInstance();
         checkUserStatus();
@@ -41,7 +43,9 @@ public class HomeActivity extends AppCompatActivity {
         FirebaseUser firebaseUser = firebaseAuth.getCurrentUser();
         if (firebaseUser != null) {
             String phone = firebaseUser.getPhoneNumber();
-            mPhoneTv.setText(phone);
+            String username = firebaseUser.getDisplayName();
+            String email = firebaseUser.getEmail();
+            mPhoneNum.setText(String.format("%s, %s, %s", username, email, phone));
         } else {
             finish();
         }
