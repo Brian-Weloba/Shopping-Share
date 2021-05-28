@@ -20,4 +20,7 @@
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
+    <string name="sign_in">Sign In</string>
+    <string name="route">Route</string>
+    <string name="email">Email</string>
 </resources>
