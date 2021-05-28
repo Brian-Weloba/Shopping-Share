@@ -5,24 +5,6 @@
     android:layout_height="match_parent"
     android:background="@color/cultured">
 
-    <!--    <EditText-->
-    <!--        android:id="@+id/editTextTextPersonName2"-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:layout_alignParentStart="true"-->
-    <!--        android:layout_alignParentEnd="true"-->
-    <!--        android:layout_alignParentBottom="true"-->
-    <!--        android:layout_centerHorizontal="true"-->
-    <!--        android:layout_marginStart="34dp"-->
-    <!--        android:layout_marginEnd="25dp"-->
-    <!--        android:layout_marginBottom="322dp"-->
-    <!--        android:autofillHints=""-->
-    <!--        android:background="@drawable/textinput"-->
-    <!--        android:ems="10"-->
-    <!--        android:inputType="phone"-->
-    <!--        android:padding="10dp"-->
-    <!--        android:textColor="@color/inputPlaceholder" />-->
-
     <TextView
         android:id="@+id/textViewHeader"
         android:layout_width="match_parent"
@@ -38,48 +20,15 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:fontFamily="@font/baloo_1"
-        android:text="@string/sign_up"
+        android:text="@string/action_sign_in_short"
         android:textColor="@color/jet"
         android:textSize="20sp" />
-
-    <TextView
-        android:id="@+id/textName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textSignUp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="30dp"
-        android:fontFamily="@font/baloo_1"
-        android:labelFor="@+id/editTextName"
-        android:text="@string/name"
-        android:textColor="@color/jet"
-        android:textSize="16sp" />
-
-    <EditText
-        android:id="@+id/editTextName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textName"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="30dp"
-        android:autofillHints=".AUTOFILL_HINT_PERSON_NAME"
-        android:background="@drawable/textinput"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:padding="15dp"
-        android:textColor="@color/inputPlaceholder"
-        android:textSize="16sp"
-        tools:ignore="DuplicateSpeakableTextCheck" />
 
     <TextView
         android:id="@+id/textPhone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/editTextName"
+        android:layout_below="@+id/textSignUp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="10dp"
         android:fontFamily="@font/baloo_1"
@@ -125,7 +74,7 @@
 
     <Button
         android:id="@+id/buttonSignUp"
-        android:layout_width="88dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/editPhone"
         android:layout_centerHorizontal="true"
@@ -134,38 +83,9 @@
         android:fontFamily="@font/baloo_1"
         android:gravity="center"
         android:padding="5dp"
-        android:text="@string/sign_up"
+        android:text="@string/continue_text"
         android:textColor="#424242"
         android:textSize="18sp" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/buttonSignUp"
-        android:layout_marginTop="10dp"
-        android:gravity="center_horizontal"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/textView8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:fontFamily="@font/baloo_1"
-            android:text="@string/already_have_an_account"
-            android:textColor="@color/jet"
-            android:textSize="14sp" />
-
-        <TextView
-            android:id="@+id/textLogInOpt"
-            android:layout_width="39dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="6sp"
-            android:layout_marginTop="10dp"
-            android:fontFamily="@font/baloo_1"
-            android:text="@string/log_in"
-            android:textColor="@color/teal"
-            android:textSize="14sp" />
-    </LinearLayout>
 
 </RelativeLayout>

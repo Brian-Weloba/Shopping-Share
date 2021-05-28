@@ -5,24 +5,6 @@
     android:layout_height="match_parent"
     android:background="@color/cultured">
 
-    <!--    <EditText-->
-    <!--        android:id="@+id/editTextTextPersonName2"-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:layout_alignParentStart="true"-->
-    <!--        android:layout_alignParentEnd="true"-->
-    <!--        android:layout_alignParentBottom="true"-->
-    <!--        android:layout_centerHorizontal="true"-->
-    <!--        android:layout_marginStart="34dp"-->
-    <!--        android:layout_marginEnd="25dp"-->
-    <!--        android:layout_marginBottom="322dp"-->
-    <!--        android:autofillHints=""-->
-    <!--        android:background="@drawable/textinput"-->
-    <!--        android:ems="10"-->
-    <!--        android:inputType="phone"-->
-    <!--        android:padding="10dp"-->
-    <!--        android:textColor="@color/inputPlaceholder" />-->
-
     <TextView
         android:id="@+id/textViewHeader"
         android:layout_width="match_parent"
@@ -43,7 +25,7 @@
         android:textSize="20sp" />
 
     <TextView
-        android:id="@+id/textPassword"
+        android:id="@+id/textInstructions"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textLogIn"
@@ -60,7 +42,7 @@
         android:id="@+id/editTextCode"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textPassword"
+        android:layout_below="@+id/textInstructions"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_centerHorizontal="true"
