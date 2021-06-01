@@ -1,44 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/cultured">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/logo"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
         android:layout_centerVertical="true"
-        android:layout_marginEnd="55dp"
-        android:fontFamily="@font/autour"
-        android:text="SHARE"
-        android:textColor="@color/secondary_orange"
-        android:textSize="30sp" />
+        android:gravity="center">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_marginStart="55dp"
-        android:fontFamily="@font/autour"
-        android:text="@string/shopping"
-        android:textColor="@color/jet"
-        android:textSize="30sp" />
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="UselessParent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_toEndOf="@+id/shoppingTxt"
+                android:fontFamily="@font/autour"
+                android:text="SHARE"
+                android:textColor="#DD2C00"
+                android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/shoppingTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/autour"
+            android:text="@string/shopping"
+            android:textColor="@color/jet"
+            android:textSize="30sp" />
+        </RelativeLayout>
+    </LinearLayout>
 
     <Button
         android:id="@+id/continueButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/logo"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="250dp"
         android:layout_marginBottom="65dp"
         android:background="@drawable/rounded_button"
         android:fontFamily="@font/baloo_1"
         android:gravity="center"
         android:padding="6dp"
-        android:textSize="18sp"
         android:text="@string/continue_text"
-        android:textColor="@color/cultured"/>
+        android:textColor="#616161"
+        android:textSize="18sp" />
 
 
 </RelativeLayout>

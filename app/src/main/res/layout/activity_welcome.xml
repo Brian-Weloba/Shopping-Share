@@ -18,12 +18,11 @@
         android:textSize="25sp" />
 
     <TextView
+        android:id="@+id/welcomeMsg"
         android:layout_width="match_parent"
-        android:layout_height="137dp"
+        android:layout_height="270dp"
         android:layout_below="@+id/textView"
-        android:layout_alignParentBottom="true"
         android:layout_marginTop="0dp"
-        android:layout_marginBottom="155dp"
         android:fontFamily="@font/baloo_1"
         android:gravity="center"
         android:paddingLeft="40dp"
@@ -36,16 +35,16 @@
         android:id="@+id/cont_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/welcomeMsg"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="65dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/rounded_button"
         android:fontFamily="@font/baloo_1"
         android:gravity="center"
         android:padding="6dp"
-        android:textSize="18sp"
         android:text="@string/continue_text"
-        android:textColor="@color/cultured"/>
+        android:textColor="#616161"
+        android:textSize="18sp" />
 
 
 </RelativeLayout>
