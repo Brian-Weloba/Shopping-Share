@@ -3,19 +3,30 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/HANCEY/AndroidStudioProjects/ShoppingShare/app/src/main/res/drawable/card.xml" value="0.1" />
+        <entry key="..\:/Users/HANCEY/AndroidStudioProjects/ShoppingShare/app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.1" />
+        <entry key="..\:/Users/HANCEY/AndroidStudioProjects/ShoppingShare/app/src/main/res/drawable/ic_baseline_add_25.xml" value="0.23148148148148148" />
+        <entry key="..\:/Users/HANCEY/AndroidStudioProjects/ShoppingShare/app/src/main/res/drawable/ic_baseline_arrow_back_ios_24.xml" value="0.1" />
+        <entry key="..\:/Users/HANCEY/AndroidStudioProjects/ShoppingShare/app/src/main/res/drawable/ic_baseline_favorite_border_25.xml" value="0.1" />
+        <entry key="..\:/Users/HANCEY/AndroidStudioProjects/ShoppingShare/app/src/main/res/drawable/ic_baseline_horizontal_rule_24.xml" value="0.1" />
         <entry key="..\:/Users/HANCEY/AndroidStudioProjects/ShoppingShare/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2604166666666667" />
         <entry key="..\:/Users/HANCEY/AndroidStudioProjects/ShoppingShare/app/src/main/res/drawable/rectangle.xml" value="0.2604166666666667" />
         <entry key="..\:/Users/HANCEY/AndroidStudioProjects/ShoppingShare/app/src/main/res/drawable/rounded_button.xml" value="0.1" />
+        <entry key="..\:/Users/HANCEY/AndroidStudioProjects/ShoppingShare/app/src/main/res/drawable/rounded_edge.xml" value="0.12314814814814815" />
         <entry key="..\:/Users/HANCEY/AndroidStudioProjects/ShoppingShare/app/src/main/res/drawable/textinput.xml" value="0.2604166666666667" />
         <entry key="..\:/Users/HANCEY/AndroidStudioProjects/ShoppingShare/app/src/main/res/drawable/tile.xml" value="0.23148148148148148" />
-        <entry key="..\:/Users/HANCEY/AndroidStudioProjects/ShoppingShare/app/src/main/res/layout/activity_home.xml" value="0.4" />
+        <entry key="..\:/Users/HANCEY/AndroidStudioProjects/ShoppingShare/app/src/main/res/layout/activity_basket.xml" value="0.264" />
+        <entry key="..\:/Users/HANCEY/AndroidStudioProjects/ShoppingShare/app/src/main/res/layout/activity_home.xml" value="0.2294921875" />
         <entry key="..\:/Users/HANCEY/AndroidStudioProjects/ShoppingShare/app/src/main/res/layout/activity_info.xml" value="0.20462962962962963" />
         <entry key="..\:/Users/HANCEY/AndroidStudioProjects/ShoppingShare/app/src/main/res/layout/activity_login.xml" value="0.264" />
-        <entry key="..\:/Users/HANCEY/AndroidStudioProjects/ShoppingShare/app/src/main/res/layout/activity_main.xml" value="0.10833333333333334" />
+        <entry key="..\:/Users/HANCEY/AndroidStudioProjects/ShoppingShare/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/Users/HANCEY/AndroidStudioProjects/ShoppingShare/app/src/main/res/layout/activity_sign_up.xml" value="0.2" />
         <entry key="..\:/Users/HANCEY/AndroidStudioProjects/ShoppingShare/app/src/main/res/layout/activity_verify_phone.xml" value="0.264" />
+        <entry key="..\:/Users/HANCEY/AndroidStudioProjects/ShoppingShare/app/src/main/res/layout/activity_view_item.xml" value="0.152" />
         <entry key="..\:/Users/HANCEY/AndroidStudioProjects/ShoppingShare/app/src/main/res/layout/activity_welcome.xml" value="0.2" />
         <entry key="..\:/Users/HANCEY/AndroidStudioProjects/ShoppingShare/app/src/main/res/layout/fragment_login.xml" value="0.10833333333333334" />
+        <entry key="..\:/Users/HANCEY/AndroidStudioProjects/ShoppingShare/app/src/main/res/layout/grid_element.xml" value="0.4" />
+        <entry key="..\:/Users/HANCEY/AndroidStudioProjects/ShoppingShare/app/src/main/res/layout/item_grid_item.xml" value="0.1" />
       </map>
     </option>
   </component>
@@ -28,7 +39,7 @@
   <component name="VisualizationToolProject">
     <option name="state">
       <ProjectState>
-        <option name="scale" value="0.2" />
+        <option name="scale" value="0.264" />
       </ProjectState>
     </option>
   </component>

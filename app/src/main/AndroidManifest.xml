@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.saturdev.shoppingshare">
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.saturdev.shoppingshare"
+    tools:ignore="MissingLeanbackLauncher">
+
+    <uses-feature
+        android:name="android.software.leanback"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.touchscreen"
+        android:required="false" />
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -12,6 +21,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ShoppingShare"
         android:usesCleartextTraffic="true">
+        <activity
+            android:name=".BasketActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ViewItemActivity"
+            android:exported="true" />
         <activity
             android:name=".InfoActivity"
             android:exported="true" />

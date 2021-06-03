@@ -23,4 +23,6 @@
     <string name="sign_in">Sign In</string>
     <string name="route">Route</string>
     <string name="email">Email</string>
+    <string name="decrease_item_quantity">Decrease item quantity</string>
+    <string name="increase_item_quantity">Increase item quantity</string>
 </resources>
