@@ -4,44 +4,191 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/cultured"
     android:orientation="vertical"
-    tools:context=".HomeActivity"
-    android:background="@color/cultured">
+    tools:context=".HomeActivity">
 
-    <TextView
+    <ImageView
+        android:id="@+id/buttonCart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/phoneNmb"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="10dp"
-        android:text="You are logged in as"
-        android:textColor="@color/jet"/>
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:src="@drawable/ic_baseline_shopping_cart_24" />
 
-    <TextView
-        android:id="@+id/phoneNmb"
+    <ImageView
+        android:id="@+id/buttonMenu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/buttonlogOut"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="10dp"
-        android:text="Phone number"
-        android:textColor="@color/jet"/>
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ic_baseline_menu_24" />
 
     <Button
         android:id="@+id/buttonlogOut"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
         android:text="logout"
-        android:textColor="@color/jet"/>
+        android:textColor="@color/jet" />
 
-<!--    <GridLayout-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent"-->
-<!--        android:columnCount="3"-->
-<!--        android:rowCount="5" />-->
+    <ImageView
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:src="@drawable/rectangle"
+        android:layout_below="@+id/buttonlogOut"
+        android:layout_marginTop="20dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/divider">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textReccomended"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/divider"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/baloo_1"
+                android:text="Reccomended Cart"
+                android:textColor="@color/jet"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:id="@+id/welcomeUser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/divider"
+                android:layout_marginTop="30dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/helloUser"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:fontFamily="@font/baloo_1"
+                        android:text="Hello User,"
+                        android:textColor="@color/jet"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_toEndOf="@+id/helloUser"
+                        android:fontFamily="@font/baloo_1"
+                        android:text="What items do you "
+                        android:textColor="@color/jet"
+                        android:textSize="18sp" />
+
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/want"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/welcomeUser"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/baloo_1"
+                android:text="want today?"
+                android:textColor="@color/jet"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/textSearch"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_below="@+id/want"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/textinput" />
+
+            <androidx.leanback.widget.HorizontalGridView
+                android:id="@+id/cartsView"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_below="@+id/textReccomended"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="0dp"
+                android:gravity="start"
+                android:textColor="@color/jet" />
+
+            <TextView
+                android:id="@+id/textCategories"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cartsView"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/baloo_1"
+                android:text="Popular"
+                android:textColor="@color/jet"
+                android:textSize="18sp" />
+
+            <androidx.leanback.widget.HorizontalGridView
+                android:id="@+id/cartsView2"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_below="@+id/textCategories"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="0dp"
+                android:gravity="start"
+                android:textColor="@color/jet" />
+
+            <TextView
+                android:id="@+id/textCategories2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textCategories"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/baloo_1"
+                android:text="New Carts"
+                android:textColor="@color/jet"
+                android:textSize="18sp" />
+
+            <androidx.leanback.widget.HorizontalGridView
+                android:id="@+id/cartsView3"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_below="@+id/textCategories2"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="0dp"
+                android:gravity="start"
+                android:textColor="@color/jet" />
+        </LinearLayout>
+    </ScrollView>
+
+
+    <!--    <GridLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        android:columnCount="3"-->
+    <!--        android:rowCount="5" />-->
 
 </RelativeLayout>
