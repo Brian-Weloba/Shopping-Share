@@ -1,8 +1,5 @@
 package com.saturdev.shoppingshare;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
@@ -15,6 +12,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -191,9 +191,14 @@ public class VerifyPhoneActivity extends AppCompatActivity {
                         Toast.makeText(VerifyPhoneActivity.this, phone + " verified!", Toast.LENGTH_SHORT).show();
                         //start home activity
                         if (firebaseAuth.getCurrentUser().getDisplayName() == null) {
-                            startActivity(new Intent(VerifyPhoneActivity.this, InfoActivity.class));
+                            Intent intent = new Intent(VerifyPhoneActivity.this, InfoActivity.class);
+                            intent.putExtra("phonenumber", getIntent().getStringExtra("phonenumber"));
+                            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                            startActivity(intent);
                         } else {
-                            startActivity(new Intent(VerifyPhoneActivity.this, HomeActivity.class));
+                            Intent intent = new Intent(VerifyPhoneActivity.this, HomeActivity.class);
+                            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                            startActivity(intent);
                         }
                     }
                 })
