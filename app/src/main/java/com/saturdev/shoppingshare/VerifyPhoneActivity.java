@@ -32,7 +32,10 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class VerifyPhoneActivity extends AppCompatActivity {
+    private static final String TAG = "MAIN_TAG";
     private static AlertDialog.Builder spd;
+    //if code sending fails, will be used to resend OTP
+    public PhoneAuthProvider.ForceResendingToken forceResendingToken;
     @BindView(R.id.buttonVerify)
     Button mVerify;
     @BindView(R.id.textResendCode)
@@ -41,19 +44,9 @@ public class VerifyPhoneActivity extends AppCompatActivity {
     EditText mCode;
     @BindView(R.id.textInstructions)
     TextView mInstructions;
-
-
     private String mVerificationId;
-
     private FirebaseAuth firebaseAuth;
-
     private ProgressDialog pd;
-
-    private static final String TAG = "MAIN_TAG";
-
-    //if code sending fails, will be used to resend OTP
-    public PhoneAuthProvider.ForceResendingToken forceResendingToken;
-
     private PhoneAuthProvider.OnVerificationStateChangedCallbacks mCallbacks;
 
     @Override

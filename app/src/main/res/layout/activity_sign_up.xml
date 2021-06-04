@@ -57,10 +57,10 @@
             android:textSize="16sp" />
 
         <EditText
-            android:layout_gravity="center"
             android:id="@+id/editTextPhone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_marginStart="10dp"
             android:autofillHints=".AUTOFILL_HINT_PHONE_NUMBER"
             android:background="@drawable/textinput"

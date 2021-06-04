@@ -114,7 +114,7 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     private void fetchData(DataSnapshot dataSnapshot) {
-        if(dataSnapshot.exists()) {
+        if (dataSnapshot.exists()) {
             cartsArrayList.clear();
 
             for (DataSnapshot ds : dataSnapshot.getChildren()) {

@@ -27,14 +27,14 @@
                 android:textColor="#DD2C00"
                 android:textSize="30sp" />
 
-        <TextView
-            android:id="@+id/shoppingTxt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/autour"
-            android:text="@string/shopping"
-            android:textColor="@color/jet"
-            android:textSize="30sp" />
+            <TextView
+                android:id="@+id/shoppingTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/autour"
+                android:text="@string/shopping"
+                android:textColor="@color/jet"
+                android:textSize="30sp" />
         </RelativeLayout>
     </LinearLayout>
 

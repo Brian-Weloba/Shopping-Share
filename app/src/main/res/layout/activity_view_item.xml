@@ -165,10 +165,10 @@
                         android:textColor="#616161" />
 
                     <ToggleButton
+                        style="@style/toggleButton"
                         android:layout_width="48dp"
                         android:layout_height="48dp"
                         android:layout_marginStart="30dp"
-                        style="@style/toggleButton"
                         android:background="@drawable/ic_toggle_bg" />
                 </RelativeLayout>
             </LinearLayout>

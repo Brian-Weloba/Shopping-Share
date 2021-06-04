@@ -22,33 +22,13 @@ import java.util.List;
 public class GridElementAdapter extends RecyclerView.Adapter<GridElementAdapter.SimpleViewHolder> {
 
 
-    private Context context;
-    private List<Carts> elements;
+    private final Context context;
+    private final List<Carts> elements;
 
     public GridElementAdapter(Context context, ArrayList<Carts> cartsArrayList) {
         this.context = context;
         this.elements = cartsArrayList;
     }
-
-    public static class SimpleViewHolder extends RecyclerView.ViewHolder {
-        public final TextView cartNameTV;
-        public final TextView priceTV;
-        public final RelativeLayout cardRL;
-        public final ImageView itemIV;
-        public final ToggleButton favouriteIV;
-        public final ToggleButton addIV;
-
-        public SimpleViewHolder(View view) {
-            super(view);
-            cartNameTV = view.findViewById(R.id.cartName);
-            priceTV = view.findViewById(R.id.cartPrice);
-            cardRL = view.findViewById(R.id.wholeCard);
-            addIV = view.findViewById(R.id.buttonAdd);
-            favouriteIV = view.findViewById(R.id.buttonLike);
-            itemIV = view.findViewById(R.id.itemPicture);
-        }
-    }
-
 
     @NonNull
     @Override
@@ -56,7 +36,6 @@ public class GridElementAdapter extends RecyclerView.Adapter<GridElementAdapter.
         final View view = LayoutInflater.from(this.context).inflate(R.layout.grid_element, parent, false);
         return new SimpleViewHolder(view);
     }
-
 
     @SuppressLint("SetTextI18n")
     @Override
@@ -90,11 +69,11 @@ public class GridElementAdapter extends RecyclerView.Adapter<GridElementAdapter.
         holder.itemIV.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(context,ViewItemActivity.class);
-                intent.putExtra("name",elements.get(position).getCart_name());
-                intent.putExtra("price",elements.get(position).getCart_price());
-                intent.putExtra("description",elements.get(position).getCart_description());
-                intent.putExtra("items",elements.get(position).getCart_items());
+                Intent intent = new Intent(context, ViewItemActivity.class);
+                intent.putExtra("name", elements.get(position).getCart_name());
+                intent.putExtra("price", elements.get(position).getCart_price());
+                intent.putExtra("description", elements.get(position).getCart_description());
+                intent.putExtra("items", elements.get(position).getCart_items());
                 context.startActivity(intent);
             }
         });
@@ -102,11 +81,11 @@ public class GridElementAdapter extends RecyclerView.Adapter<GridElementAdapter.
         holder.cartNameTV.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(context,ViewItemActivity.class);
-                intent.putExtra("name",elements.get(position).getCart_name());
-                intent.putExtra("price",elements.get(position).getCart_price());
-                intent.putExtra("description",elements.get(position).getCart_description());
-                intent.putExtra("items",elements.get(position).getCart_items());
+                Intent intent = new Intent(context, ViewItemActivity.class);
+                intent.putExtra("name", elements.get(position).getCart_name());
+                intent.putExtra("price", elements.get(position).getCart_price());
+                intent.putExtra("description", elements.get(position).getCart_description());
+                intent.putExtra("items", elements.get(position).getCart_items());
                 context.startActivity(intent);
             }
         });
@@ -114,11 +93,11 @@ public class GridElementAdapter extends RecyclerView.Adapter<GridElementAdapter.
         holder.priceTV.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(context,ViewItemActivity.class);
-                intent.putExtra("name",elements.get(position).getCart_name());
-                intent.putExtra("price",elements.get(position).getCart_price());
-                intent.putExtra("description",elements.get(position).getCart_description());
-                intent.putExtra("items",elements.get(position).getCart_items());
+                Intent intent = new Intent(context, ViewItemActivity.class);
+                intent.putExtra("name", elements.get(position).getCart_name());
+                intent.putExtra("price", elements.get(position).getCart_price());
+                intent.putExtra("description", elements.get(position).getCart_description());
+                intent.putExtra("items", elements.get(position).getCart_items());
                 context.startActivity(intent);
             }
         });
@@ -138,5 +117,24 @@ public class GridElementAdapter extends RecyclerView.Adapter<GridElementAdapter.
             return 0;
         }
 
+    }
+
+    public static class SimpleViewHolder extends RecyclerView.ViewHolder {
+        public final TextView cartNameTV;
+        public final TextView priceTV;
+        public final RelativeLayout cardRL;
+        public final ImageView itemIV;
+        public final ToggleButton favouriteIV;
+        public final ToggleButton addIV;
+
+        public SimpleViewHolder(View view) {
+            super(view);
+            cartNameTV = view.findViewById(R.id.cartName);
+            priceTV = view.findViewById(R.id.cartPrice);
+            cardRL = view.findViewById(R.id.wholeCard);
+            addIV = view.findViewById(R.id.buttonAdd);
+            favouriteIV = view.findViewById(R.id.buttonLike);
+            itemIV = view.findViewById(R.id.itemPicture);
+        }
     }
 }

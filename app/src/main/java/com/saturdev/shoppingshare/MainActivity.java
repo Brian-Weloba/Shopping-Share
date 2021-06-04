@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         if (number == 0) {
-           mContinueButton.setVisibility(View.VISIBLE);
+            mContinueButton.setVisibility(View.VISIBLE);
         } else {
             timer.start();
         }

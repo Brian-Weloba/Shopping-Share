@@ -43,7 +43,7 @@ public class ViewItemActivity extends AppCompatActivity {
         String price = getIntent().getStringExtra("price");
 
         cartNameTV.setText(name);
-        priceTV.setText("KSH "+ price);
+        priceTV.setText("KSH " + price);
         descTV.setText(description);
         itemsTV.setText(items);
     }
