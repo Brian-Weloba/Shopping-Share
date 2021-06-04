@@ -41,9 +41,9 @@
         android:id="@+id/divider"
         android:layout_width="match_parent"
         android:layout_height="2dp"
-        android:src="@drawable/rectangle"
         android:layout_below="@+id/buttonlogOut"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="20dp"
+        android:src="@drawable/rectangle" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -56,58 +56,38 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/textReccomended"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/divider"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="30dp"
-                android:fontFamily="@font/baloo_1"
-                android:text="Reccomended Cart"
-                android:textColor="@color/jet"
-                android:textSize="20sp" />
-
             <LinearLayout
                 android:id="@+id/welcomeUser"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/divider"
                 android:layout_marginTop="30dp">
 
-                <RelativeLayout
+                <TextView
+                    android:id="@+id/helloUser"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:fontFamily="@font/baloo_1"
+                    android:text="@string/hello_user"
+                    android:textColor="@color/jet"
+                    android:textSize="18sp" />
 
-                    <TextView
-                        android:id="@+id/helloUser"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="20dp"
-                        android:fontFamily="@font/baloo_1"
-                        android:text="Hello User,"
-                        android:textColor="@color/jet"
-                        android:textSize="18sp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="5dp"
-                        android:layout_toEndOf="@+id/helloUser"
-                        android:fontFamily="@font/baloo_1"
-                        android:text="What items do you "
-                        android:textColor="@color/jet"
-                        android:textSize="18sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:fontFamily="@font/baloo_1"
+                    android:text="@string/what_items_do_you"
+                    android:textColor="@color/jet"
+                    android:textSize="18sp" />
 
 
-                </RelativeLayout>
             </LinearLayout>
 
             <TextView
                 android:id="@+id/want"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/welcomeUser"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="5dp"
                 android:fontFamily="@font/baloo_1"
@@ -119,17 +99,26 @@
                 android:id="@+id/textSearch"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
-                android:layout_below="@+id/want"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="30dp"
                 android:layout_marginEnd="30dp"
                 android:background="@drawable/textinput" />
 
+            <TextView
+                android:id="@+id/textReccomended"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/baloo_1"
+                android:text="@string/reccomended_cart"
+                android:textColor="@color/jet"
+                android:textSize="20sp" />
+
             <androidx.leanback.widget.HorizontalGridView
                 android:id="@+id/cartsView"
                 android:layout_width="match_parent"
                 android:layout_height="250dp"
-                android:layout_below="@+id/textReccomended"
                 android:layout_marginLeft="0dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="0dp"
@@ -152,7 +141,6 @@
                 android:id="@+id/cartsView2"
                 android:layout_width="match_parent"
                 android:layout_height="250dp"
-                android:layout_below="@+id/textCategories"
                 android:layout_marginLeft="0dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="0dp"
@@ -163,7 +151,6 @@
                 android:id="@+id/textCategories2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/textCategories"
                 android:layout_marginStart="30dp"
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/baloo_1"
@@ -175,7 +162,6 @@
                 android:id="@+id/cartsView3"
                 android:layout_width="match_parent"
                 android:layout_height="250dp"
-                android:layout_below="@+id/textCategories2"
                 android:layout_marginLeft="0dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="0dp"
@@ -183,12 +169,4 @@
                 android:textColor="@color/jet" />
         </LinearLayout>
     </ScrollView>
-
-
-    <!--    <GridLayout-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="match_parent"-->
-    <!--        android:columnCount="3"-->
-    <!--        android:rowCount="5" />-->
-
 </RelativeLayout>
