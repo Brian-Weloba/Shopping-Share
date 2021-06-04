@@ -1,170 +1,178 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/top"
-        android:layout_width="match_parent"
-        android:layout_height="350dp"
-        android:background="@drawable/rectangle" />
-
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/top"
-        android:layout_alignParentBottom="true"
-        android:layout_marginTop="-30dp"
-        android:background="@drawable/rounded_edge">
+        android:layout_height="wrap_content">
+
 
         <TextView
-            android:id="@+id/cartName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="40dp"
-            android:fontFamily="@font/baloo_1"
-            android:text="Name of cart"
-            android:textColor="@color/jet"
-            android:textSize="30sp" />
+            android:id="@+id/top"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:background="@drawable/rectangle" />
 
-        <LinearLayout
-            android:id="@+id/priceQuantity"
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/cartName"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="50dp"
-            android:layout_marginEnd="30dp"
-            android:orientation="horizontal">
+            android:layout_below="@+id/top"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="-30dp"
+            android:background="@drawable/rounded_edge">
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                tools:ignore="UselessParent">
-
-                <ImageView
-                    android:id="@+id/reduceCart"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:contentDescription="@string/decrease_item_quantity"
-                    android:src="@drawable/ic_baseline_horizontal_rule_24" />
-
-                <TextView
-                    android:id="@+id/cartItemCounter"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginStart="30dp"
-                    android:layout_toEndOf="@+id/reduceCart"
-                    android:fontFamily="@font/autour"
-                    android:text="1"
-                    android:textColor="@color/jet"
-                    android:textSize="30sp" />
-
-
-                <ImageView
-                    android:id="@+id/increaseCart"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginStart="30dp"
-                    android:layout_toEndOf="@+id/cartItemCounter"
-                    android:contentDescription="@string/increase_item_quantity"
-                    android:src="@drawable/ic_baseline_add_24" />
-
-                <TextView
-                    android:id="@+id/itemPrice"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_centerVertical="true"
-                    android:fontFamily="@font/baloo_1"
-                    android:text="KES 1,000"
-                    android:textColor="@color/jet"
-                    android:textSize="18sp" />
-
-            </RelativeLayout>
-        </LinearLayout>
-
-        <TextView
-            android:id="@+id/onePack"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/priceQuantity"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="60dp"
-            android:fontFamily="@font/baloo_1"
-            android:text="One Pack Contains:"
-            android:textColor="@color/jet"
-            android:textSize="18sp" />
-
-        <ImageView
-            android:id="@+id/line"
-            android:layout_width="150dp"
-            android:layout_height="2dp"
-            android:layout_below="@+id/onePack"
-            android:layout_marginStart="35dp"
-            android:src="@drawable/rectangle" />
-
-        <TextView
-            android:id="@+id/itemsInCart"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/line"
-            android:layout_marginStart="35dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginEnd="50dp"
-            android:fontFamily="@font/baloo_1"
-            android:text="400g Bread, 1 tray of eggs, 3 packets of milk and 1kg beef."
-            android:textColor="@color/jet"
-            android:textSize="16sp" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/itemsInCart"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginEnd="50dp"
-            android:fontFamily="@font/alegreya_sans"
-            android:text="This is a short description of the cart"
-            android:textColor="@color/jet"
-            android:textSize="18dp" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true">
-
-            <RelativeLayout
+            <TextView
+                android:id="@+id/cartName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                tools:ignore="UselessParent">
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="40dp"
+                android:fontFamily="@font/baloo_1"
+                android:text="Name of cart"
+                android:textColor="@color/jet"
+                android:textSize="30sp" />
 
-                <Button
-                    android:id="@+id/button"
+            <LinearLayout
+                android:id="@+id/priceQuantity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cartName"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="30dp"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:ignore="UselessParent">
+
+                    <ImageView
+                        android:id="@+id/reduceCart"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:contentDescription="@string/decrease_item_quantity"
+                        android:src="@drawable/ic_baseline_horizontal_rule_24" />
+
+                    <TextView
+                        android:id="@+id/cartItemCounter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="30dp"
+                        android:layout_toEndOf="@+id/reduceCart"
+                        android:fontFamily="@font/autour"
+                        android:text="1"
+                        android:textColor="@color/jet"
+                        android:textSize="30sp" />
+
+
+                    <ImageView
+                        android:id="@+id/increaseCart"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="30dp"
+                        android:layout_toEndOf="@+id/cartItemCounter"
+                        android:contentDescription="@string/increase_item_quantity"
+                        android:src="@drawable/ic_baseline_add_24" />
+
+                    <TextView
+                        android:id="@+id/itemPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/baloo_1"
+                        android:text="KES 1,000"
+                        android:textColor="@color/jet"
+                        android:textSize="30sp" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/onePack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/priceQuantity"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="60dp"
+                android:fontFamily="@font/baloo_1"
+                android:text="One Pack Contains:"
+                android:textColor="@color/jet"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/line"
+                android:layout_width="150dp"
+                android:layout_height="2dp"
+                android:layout_below="@+id/onePack"
+                android:layout_marginStart="35dp"
+                android:src="@drawable/rectangle" />
+
+            <TextView
+                android:id="@+id/itemsInCart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="50dp"
+                android:fontFamily="@font/baloo_1"
+                android:text="400g Bread, 1 tray of eggs, 3 packets of milk and 1kg beef."
+                android:textColor="@color/jet"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/cartDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/itemsInCart"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="50dp"
+                android:fontFamily="@font/alegreya_sans"
+                android:text="This is a short description of the cart"
+                android:textColor="@color/jet"
+                android:textSize="18dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cartDescription"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="30dp">
+
+                <RelativeLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginEnd="30dp"
-                    android:layout_marginBottom="50dp"
-                    android:background="@drawable/rounded_button"
-                    android:fontFamily="@font/baloo_1"
-                    android:text="Add to basket"
-                    android:textColor="#616161" />
+                    tools:ignore="UselessParent">
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="30dp"
-                    android:src="@drawable/ic_baseline_favorite_border_24" />
-            </RelativeLayout>
-        </LinearLayout>
+                    <Button
+                        android:id="@+id/button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="30dp"
+                        android:layout_marginBottom="50dp"
+                        android:background="@drawable/rounded_button"
+                        android:fontFamily="@font/baloo_1"
+                        android:text="Add to basket"
+                        android:textColor="#616161" />
 
+                    <ToggleButton
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_marginStart="30dp"
+                        style="@style/toggleButton"
+                        android:background="@drawable/ic_toggle_bg" />
+                </RelativeLayout>
+            </LinearLayout>
 
+        </RelativeLayout>
     </RelativeLayout>
-
-</RelativeLayout>
+</ScrollView>
