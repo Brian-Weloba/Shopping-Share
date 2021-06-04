@@ -25,4 +25,13 @@
     <string name="email">Email</string>
     <string name="decrease_item_quantity">Decrease item quantity</string>
     <string name="increase_item_quantity">Increase item quantity</string>
+    <string name="item">Item</string>
+    <string name="add_to_favorites">Add to favorites</string>
+    <string name="the_cart_name">The Cart Name</string>
+    <string name="kes_550">KES 550</string>
+    <string name="add_to_cart">Add to cart</string>
+    <string name="prefix_kes">\"KES \"</string>
+    <string name="hello_user">Hello User,</string>
+    <string name="what_items_do_you">What items do you</string>
+    <string name="reccomended_cart">Reccomended Cart</string>
 </resources>

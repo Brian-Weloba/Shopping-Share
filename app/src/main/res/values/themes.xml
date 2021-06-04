@@ -14,4 +14,17 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimary</item>
         <!-- Customize your theme here. -->
     </style>
+    <style name="Widget.Button.Toggle" parent="android:Widget">
+        <item name="android:background">@drawable/ic_toggle_bg</item>
+        <item name="android:disabledAlpha">?android:attr/disabledAlpha</item>
+    </style>
+    <style name="Widget.Button.Toggle1" parent="android:Widget">
+        <item name="android:background">@drawable/ic_toggle_addbg</item>
+        <item name="android:disabledAlpha">?android:attr/disabledAlpha</item>
+    </style>
+    <style name="toggleButton"  parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:buttonStyleToggle">@style/Widget.Button.Toggle</item>
+        <item name="android:textOn" />
+        <item name="android:textOff" />
+    </style>
 </resources>
