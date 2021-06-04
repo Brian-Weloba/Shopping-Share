@@ -4,7 +4,6 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -82,27 +81,21 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
-        mLogOut.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                SharedPreferences.Editor prefEditor = sharedPref.edit();
-                prefEditor.putInt("isLogged", 0);
-                prefEditor.apply();
+        mLogOut.setOnClickListener(v -> {
+            SharedPreferences.Editor prefEditor = sharedPref.edit();
+            prefEditor.putInt("isLogged", 0);
+            prefEditor.apply();
 
-                firebaseAuth.signOut();
+            firebaseAuth.signOut();
 
-                Intent intent = new Intent(HomeActivity.this, MainActivity.class);
-                startActivity(intent);
+            Intent intent = new Intent(HomeActivity.this, MainActivity.class);
+            startActivity(intent);
 
-            }
         });
 
-        mCart.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(HomeActivity.this, BasketActivity.class);
-                startActivity(intent);
-            }
+        mCart.setOnClickListener(v -> {
+            Intent intent = new Intent(HomeActivity.this, BasketActivity.class);
+            startActivity(intent);
         });
 
     }
