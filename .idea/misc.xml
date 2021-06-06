@@ -29,9 +29,12 @@
         <entry key="..\:/Users/HANCEY/AndroidStudioProjects/ShoppingShare/app/src/main/res/layout/activity_verify_phone.xml" value="0.264" />
         <entry key="..\:/Users/HANCEY/AndroidStudioProjects/ShoppingShare/app/src/main/res/layout/activity_view_item.xml" value="0.264" />
         <entry key="..\:/Users/HANCEY/AndroidStudioProjects/ShoppingShare/app/src/main/res/layout/activity_welcome.xml" value="0.2" />
+        <entry key="..\:/Users/HANCEY/AndroidStudioProjects/ShoppingShare/app/src/main/res/layout/app_bar_home.xml" value="0.10569105691056911" />
         <entry key="..\:/Users/HANCEY/AndroidStudioProjects/ShoppingShare/app/src/main/res/layout/fragment_login.xml" value="0.10833333333333334" />
         <entry key="..\:/Users/HANCEY/AndroidStudioProjects/ShoppingShare/app/src/main/res/layout/grid_element.xml" value="0.4" />
         <entry key="..\:/Users/HANCEY/AndroidStudioProjects/ShoppingShare/app/src/main/res/layout/item_grid_item.xml" value="0.1" />
+        <entry key="..\:/Users/HANCEY/AndroidStudioProjects/ShoppingShare/app/src/main/res/layout/nav_header_home.xml" value="0.16983695652173914" />
+        <entry key="..\:/Users/HANCEY/AndroidStudioProjects/ShoppingShare/app/src/main/res/menu/activity_main_drawer.xml" value="0.21666666666666667" />
       </map>
     </option>
   </component>

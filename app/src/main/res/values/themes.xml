@@ -12,6 +12,8 @@
 
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimary</item>
+        <item name="android:textColor">@color/jet</item>
+        <item name="android:itemBackground">@color/cultured</item>
         <!-- Customize your theme here. -->
     </style>
     <style name="Widget.Button.Toggle" parent="android:Widget">
