@@ -1,6 +1,7 @@
 package com.saturdev.shoppingshare;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -111,12 +112,13 @@ public class ViewItemActivity extends AppCompatActivity {
         saveCurrentDate = currentDate.format(calForDate.getTime());
 
         SimpleDateFormat currentTime = new SimpleDateFormat("HH:mm:ss a");
-        saveCurrentTime = currentDate.format(calForDate.getTime());
+        saveCurrentTime = currentTime.format(calForDate.getTime());
 
         final DatabaseReference cartListRef = FirebaseDatabase.getInstance().getReference().child("cart List");
-        HashMap<String, Object> cartMap = new HashMap<>();
+
+        final HashMap<String, Object> cartMap = new HashMap<>();
         cartMap.put("name", cartNameTV.getText().toString());
-        cartMap.put("price", priceTV.getText().toString());
+        cartMap.put("price", getIntent().getStringExtra("price"));
         cartMap.put("description", descTV.getText().toString());
         cartMap.put("items", itemsTV.getText().toString());
         cartMap.put("date", saveCurrentDate);
@@ -139,9 +141,9 @@ public class ViewItemActivity extends AppCompatActivity {
                                     .addOnCompleteListener(new OnCompleteListener<Void>() {
                                         @Override
                                         public void onComplete(@NonNull Task<Void> task) {
-                                            if(task.isSuccessful()){
+                                            if (task.isSuccessful()) {
                                                 Toast.makeText(ViewItemActivity.this, "Added to cart", Toast.LENGTH_SHORT).show();
-//                                                startActivity(new Intent(ViewItemActivity.this,HomeActivity.class));
+                                                startActivity(new Intent(ViewItemActivity.this, HomeActivity.class));
                                             }
                                         }
                                     });

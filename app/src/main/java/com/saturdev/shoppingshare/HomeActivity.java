@@ -48,6 +48,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     @SuppressLint("NonConstantResourceId")
     @BindView(R.id.drawerLayout)
     DrawerLayout drawer;
+    @SuppressLint("NonConstantResourceId")
     @BindView(R.id.nav_view)
     NavigationView navigationView;
     ActionBarDrawerToggle toggle;
