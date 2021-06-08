@@ -1,4 +1,4 @@
-package com.saturdev.shoppingshare;
+package com.saturdev.shoppingshare.Models;
 
 public class Carts {
     private String cart_name, cart_items, cart_description;

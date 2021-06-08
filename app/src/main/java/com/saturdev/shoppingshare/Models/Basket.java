@@ -1,4 +1,4 @@
-package com.saturdev.shoppingshare;
+package com.saturdev.shoppingshare.Models;
 
 public class Basket {
     private String name, price, quantity, description, items;

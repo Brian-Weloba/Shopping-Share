@@ -1,4 +1,4 @@
-package com.saturdev.shoppingshare;
+package com.saturdev.shoppingshare.Adapters;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -15,6 +15,10 @@ import android.widget.ToggleButton;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.saturdev.shoppingshare.Models.Carts;
+import com.saturdev.shoppingshare.R;
+import com.saturdev.shoppingshare.ViewItemActivity;
 
 import java.util.ArrayList;
 import java.util.List;

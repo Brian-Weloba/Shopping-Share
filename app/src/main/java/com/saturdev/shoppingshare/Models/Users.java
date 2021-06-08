@@ -1,4 +1,4 @@
-package com.saturdev.shoppingshare.users;
+package com.saturdev.shoppingshare.Models;
 
 public class Users {
     int userId;
